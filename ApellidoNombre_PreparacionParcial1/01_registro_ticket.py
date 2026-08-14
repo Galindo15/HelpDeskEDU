@@ -72,4 +72,12 @@ ticket = {
     "categoria": categoria,
     "prioridad": prioridad,
     "status": "Open"
-}
+}# Mostrar resumen
+print("\n=== RESUMEN DEL TICKET ===")
+print(f"Número: {ticket['numero']}")
+print(f"Solicitante: {ticket['solicitante']}")
+print(f"Título: {ticket['titulo']}")
+print(f"Descripción: {ticket['descripcion']}")
+print(f"Categoría: {ticket['categoria']}")
+print(f"Prioridad: {ticket['prioridad']}")
+print(f"Estado: {ticket['status']}")
