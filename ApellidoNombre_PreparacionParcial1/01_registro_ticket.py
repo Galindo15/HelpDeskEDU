@@ -27,3 +27,21 @@ while True:
     if descripcion:
         break
     print("Error: la descripción no puede estar vacía.")
+    # Categoría
+categorias_validas = ["General", "Hardware", "Software", "Network"]
+
+while True:
+    categoria = input("Categoría (General, Hardware, Software, Network): ").strip()
+
+    categoria_encontrada = None
+
+    for categoria_valida in categorias_validas:
+        if categoria.lower() == categoria_valida.lower():
+            categoria_encontrada = categoria_valida
+            break
+
+    if categoria_encontrada:
+        categoria = categoria_encontrada
+        break
+
+    print("Error: categoría no válida.")
