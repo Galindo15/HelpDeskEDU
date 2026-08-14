@@ -45,3 +45,31 @@ while True:
         break
 
     print("Error: categoría no válida.")
+    # Prioridad
+prioridades_validas = ["Low", "Medium", "High", "Critical"]
+
+while True:
+    prioridad = input("Prioridad (Low, Medium, High, Critical): ").strip()
+
+    prioridad_encontrada = None
+
+    for prioridad_valida in prioridades_validas:
+        if prioridad.lower() == prioridad_valida.lower():
+            prioridad_encontrada = prioridad_valida
+            break
+
+    if prioridad_encontrada:
+        prioridad = prioridad_encontrada
+        break
+
+    print("Error: prioridad no válida.")
+    # Crear diccionario
+ticket = {
+    "numero": numero,
+    "solicitante": solicitante,
+    "titulo": titulo,
+    "descripcion": descripcion,
+    "categoria": categoria,
+    "prioridad": prioridad,
+    "status": "Open"
+}
